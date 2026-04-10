@@ -1,4 +1,4 @@
-# Frontpage — [Your Name]
+# Frontpage — Oluomachi Umoren
 
 A customizable content aggregator that pulls RSS and Atom feeds into one well-designed reading dashboard.
 
