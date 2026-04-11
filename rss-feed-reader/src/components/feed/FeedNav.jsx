@@ -10,7 +10,7 @@ export default function FeedNav() {
         <ul className="flex flex-col gap-2">
           <li
             className={
-              "flex justify-between p-2 rounded items-center " +
+              "flex justify-between p-2 rounded items-center transition duration-300 ease-in-out " +
               (location.pathname === "/"
                 ? "bg-blue-50 text-blue-900 shadow-sm"
                 : "")
@@ -33,7 +33,7 @@ export default function FeedNav() {
 
           <li
             className={
-              "flex justify-between p-2 rounded items-center " +
+              "flex justify-between p-2 rounded items-center transition duration-300 ease-in-out " +
               (location.pathname === "/saved"
                 ? "bg-blue-50 text-blue-900 shadow-sm"
                 : "")

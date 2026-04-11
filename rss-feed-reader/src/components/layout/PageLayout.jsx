@@ -12,7 +12,7 @@ export default function PageLayout() {
               to="/"
               className={
                 " px-2 py-1 rounded transition duration-300 ease-in-out " +
-                (location.pathname === "/" ? "bg-gray-100 text-gray-800" : "")
+                ((location.pathname === "/" || location.pathname === "/saved")? "bg-gray-100 text-gray-800" : "")
               }
             >
               Feed
