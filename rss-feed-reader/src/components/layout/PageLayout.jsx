@@ -1,4 +1,5 @@
 import FeedItemsList from "../feed/FeedItemsList";
+import FeedNav from "../feed/FeedNav";
 
 export default function PageLayout() {
   return (
@@ -22,6 +23,7 @@ export default function PageLayout() {
       <main className="flex h-98/105">
         <aside className="bg-gray-50 border-r-1 border-gray-200 h-full w-1/5">
           {/* page nav goes here */}
+          <FeedNav/>
         </aside>
         <article className="h-full w-4/5">
           {/* main content goes here */}
