@@ -7,13 +7,18 @@ import App from "./App.jsx";
 import FeedPage from "./pages/FeedPage.jsx";
 import DigestPage from "./pages/DigestPage.jsx";
 import DiscoverPage from "./pages/DiscoverPage.jsx";
+import FeedItemsList from "./components/feed/FeedItemsList.jsx";
+import SavedFeed from "./components/feed/SavedFeed.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<FeedPage />} />
+          <Route path="/" element={<FeedPage />}>
+            <Route index element={<FeedItemsList />} />
+            <Route path="saved" element={<SavedFeed />} />
+          </Route>
           <Route path="digest" element={<DigestPage />} />
           <Route path="discover" element={<DiscoverPage />} />
         </Route>

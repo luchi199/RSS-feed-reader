@@ -1,10 +1,19 @@
+import { useNavigate } from "react-router";
+
 export default function FeedNav() {
+  const navigate = useNavigate();
+  function handleNav(path) {
+    navigate(`/${path}`);
+  }
   return (
     <div className="flex flex-col gap-4 w-full p-4">
       <nav>
         <ul className="flex flex-col gap-2">
           <li className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => handleNav("/")}
+            >
               <img src="#" alt="h" />
               <p>All Items</p>
             </div>
@@ -12,7 +21,10 @@ export default function FeedNav() {
           </li>
 
           <li className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => handleNav("saved")}
+            >
               <img src="#" alt="h" />
               <p>Saved</p>
             </div>
