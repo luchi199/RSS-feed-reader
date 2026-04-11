@@ -6,7 +6,7 @@ export default function FeedItemsList() {
       <div className="flex items-center w-full h-2/30 border-b-1 border-gray-200 px-4 py-2">
         <div className="flex items-center gap-3">
           <h2 className="text-lg font-semibold">All Items</h2>
-          <p className="text-gray-500 text-sm">47 unread</p>
+          <p className="text-gray-400 text-xs">47 unread</p>
         </div>
       </div>
 

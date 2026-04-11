@@ -23,7 +23,7 @@ export default function FeedNav() {
             </div>
             <p
               className={
-                "text-sm" +
+                "text-sm " +
                 (location.pathname === "/" ? "text-blue-900" : "text-gray-500")
               }
             >
@@ -46,7 +46,7 @@ export default function FeedNav() {
             </div>
             <p
               className={
-                "text-sm" +
+                "text-sm " +
                 (location.pathname === "/saved"
                   ? "text-blue-900"
                   : "text-gray-500")

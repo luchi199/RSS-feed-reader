@@ -1,6 +1,7 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, useLocation } from "react-router";
 
 export default function PageLayout() {
+  const location = useLocation();
   return (
     <div className="w-screen h-screen">
       <header className="flex justify-between align-center border-b-1 border-gray-200 h-2/30">
@@ -9,19 +10,28 @@ export default function PageLayout() {
           <div className="flex gap-3 text-gray-500 text-md">
             <NavLink
               to="/"
-              className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out"
+              className={
+                " px-2 py-1 rounded transition duration-300 ease-in-out " +
+                (location.pathname === "/" ? "bg-gray-100 text-gray-800" : "")
+              }
             >
               Feed
             </NavLink>
             <NavLink
               to="/digest"
-              className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out"
+              className={
+                " px-2 py-1 rounded transition duration-300 ease-in-out " +
+                (location.pathname === "/digest" ? "bg-gray-100 text-gray-800" : "")
+              }
             >
               Digest
             </NavLink>
             <NavLink
               to="/discover"
-              className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out"
+              className={
+                " px-2 py-1 rounded transition duration-300 ease-in-out " +
+                (location.pathname === "/discover" ? "bg-gray-100 text-gray-800" : "")
+              }
             >
               Discover
             </NavLink>
