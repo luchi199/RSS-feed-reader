@@ -1,6 +1,5 @@
 import { Outlet } from "react-router";
 
-import FeedItemsList from "../components/feed/FeedItemsList";
 import FeedNav from "../components/feed/FeedNav";
 
 export default function FeedPage() {
