@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from "react-router";
+import CategoryList from "./CategoryList";
 
 export default function FeedNav() {
   const navigate = useNavigate();
@@ -60,7 +61,10 @@ export default function FeedNav() {
       <hr className="border-gray-200" />
       <section>
         <h4 className="text-gray-400 font-medium text-sm">CATEGORIES</h4>
-        <div>Categories go here</div>
+
+        <CategoryList />
+        <CategoryList />
+        <CategoryList />
       </section>
     </div>
   );
