@@ -1,3 +1,5 @@
+import FeedItemsList from "../feed/FeedItemsList";
+
 export default function PageLayout() {
   return (
     <div className="w-screen h-screen">
@@ -23,6 +25,7 @@ export default function PageLayout() {
         </aside>
         <article className="h-full w-4/5">
           {/* main content goes here */}
+          <FeedItemsList/>
         </article>
       </main>
     </div>
