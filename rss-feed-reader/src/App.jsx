@@ -1,5 +1,11 @@
+import PageLayout from "./components/layout/PageLayout";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <PageLayout />
+    </>
+  );
 }
 
 export default App;
