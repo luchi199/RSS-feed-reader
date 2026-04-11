@@ -1,5 +1,4 @@
-import FeedItemsList from "../feed/FeedItemsList";
-import FeedNav from "../feed/FeedNav";
+import { NavLink, Outlet } from "react-router";
 
 export default function PageLayout() {
   return (
@@ -8,28 +7,28 @@ export default function PageLayout() {
         <div className="flex justify-evenly items-center gap-6 px-4">
           <h1 className="text-2xl font-semibold">DevFeed</h1>
           <div className="flex gap-3 text-gray-500 text-md">
-            <p className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out">
+            <NavLink
+              to="/"
+              className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out"
+            >
               Feed
-            </p>
-            <p className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out">
+            </NavLink>
+            <NavLink
+              to="/digest"
+              className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out"
+            >
               Digest
-            </p>
-            <p className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out">
+            </NavLink>
+            <NavLink
+              to="/discover"
+              className="hover:bg-gray-100 hover:text-gray-800 hover:shadow-sm px-2 py-1 rounded transition duration-300 ease-in-out"
+            >
               Discover
-            </p>
+            </NavLink>
           </div>
         </div>
       </header>
-      <main className="flex h-98/105">
-        <aside className="bg-gray-50 border-r-1 border-gray-200 h-full w-1/5">
-          {/* page nav goes here */}
-          <FeedNav/>
-        </aside>
-        <article className="h-full w-4/5">
-          {/* main content goes here */}
-          <FeedItemsList/>
-        </article>
-      </main>
+      <Outlet />
     </div>
   );
 }
